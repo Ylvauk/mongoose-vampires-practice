@@ -1,12 +1,12 @@
 # Mongoose Vampires
 
-For this lab, you will be using some of the mongoose commands that you learned today and you will be **reading the documents** to find **new** queries to complete the following activities. Researching queries and implementing them is a big part of this lab!
+For this assignment, you will be using some of the mongoose commands that you learned today and you will be **reading the documents** to find **new** queries to complete the following activities. Researching queries and implementing them is a big part of this lab!
 
 ![mongoose](https://s-media-cache-ak0.pinimg.com/564x/ee/b7/a9/eeb7a99383582d53e65ffcc0e4a225bd.jpg)
 
 # Resources
 
-Utilize the following resources to research the commands you will need:
+Note that some of these prompts will be challenging! Do your best and utilize the following resources to research the commands you will need:
 
 - Your notes from today
 - [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)
