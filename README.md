@@ -86,7 +86,7 @@ var vampire = {
 
 1. Build a vampire **schema** and **model** that matches the object above inside the `models/vampires.js` file
 
-1. Go to the Mongoose documentation to learn more about validations and defaults: http://mongoosejs.com/docs/api.html
+1. Go to the [Mongoose documentation](https://mongoosejs.com/docs/schematypes.html) to learn more about validations and defaults
 
 1. The **name field is required**, so make sure that the schema accommodates for that.
 
