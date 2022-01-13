@@ -40,7 +40,7 @@ DATABASE_URL=mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/test?retry
 You need to update the connection string as follows:
 
 1. Replace with the password of the database user you created.
-1. _IMPORTANT_: The connection string by default connects to a namespace (database) named admin (...mongodb.net/admin?retryWrites=true...). However, the admin namespace must be updated to your preferred namespace (database) name. For example, "vampires": (...mongodb.net/vampires?retryWrites=true...).
+1. _IMPORTANT_: The connection string by default connects to a namespace (database) named myFirstDatabase. However, this should be updated to your preferred namespace (database) name. For example, "vampires": `...mongodb.net/vampires?retryWrites=true...`.
 
 Complete the prompts below. When complete, submit your work with a pull request on the original repo.
 
