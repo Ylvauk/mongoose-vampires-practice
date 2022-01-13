@@ -69,7 +69,7 @@ var vampire = {
 
 1. Also, **no vampire will have less than 0 victims**, so add that into the schema as a validation.
 
-1. Lastly, set the **default value of the hair color to blonde**.
+1. Lastly, set the **default value of the hair color to black**.
 
 ## Inserting Seed Data Using Mongoose
 
@@ -95,7 +95,7 @@ Vampire.insertMany(seedData, (err, vampires) => {
 
 ### Add some new vampire data
 
-1. Using the create method, create 4 new vampires with any qualities that you like two should be male and two should be female.
+1. Using the create method, create 4 new vampires with any qualities that you like.
 
 ## Querying
 
@@ -103,7 +103,7 @@ Vampire.insertMany(seedData, (err, vampires) => {
 
 Write a different query for each of the following:
 
-1. Find all the vampires that that are females
+1. Find all the vampires that have a gender of female
 2. have greater than 500 victims
 3. have fewer than or equal to 150 victims
 4. have a victim count is not equal to 210234
@@ -127,7 +127,7 @@ Select all the vampires that:
 3. have more than 1000 victims or love marshmallows
 4. have red hair or green eyes
 
-### Before you continue on to part two, you should know that Mongoose has some sweet helper functions that can make all this a little easier. See below.
+### Before you continue on to part two, you should know that Mongoose has some sweet [helper functions](https://mongoosejs.com/docs/queries.html#queries) that can make all this a little easier. See below.
 
 Mongoose's default find gives you an array of objects. But what if you know you only want one object? These convenience methods just give you one object without the usual array surrounding it.
 
@@ -196,14 +196,13 @@ Select all vampires that:
 
 ## Replace
 
-1. replace the vampire called 'Claudia' with a vampire called 'Eve'. 'Eve' will have a key called 'portrayed_by' with the value 'Tilda Swinton'
-2. replace the first male vampire with another whose name is 'Guy Man', and who has a key 'is_actually' with the value 'were-lizard'
+1. replace the vampire called 'Claudia' with a vampire called 'Claude', and any other properties you'd like
+2. replace the first male vampire with another whose name is 'Guy Man', and any other properties you'd like
 
 ## Update
 
-1. Update 'Eve' to have a gender of 'm'
-2. Rename 'Eve's' name field to 'moniker'
-3. We now no longer want to categorize female gender as "f", but rather as **fems**. Update all females so that the they are of gender "fems".
+1. Update 'Claude' to have a gender of 'm'
+1. We now no longer want to categorize female gender as "f", but rather as **female**. Update all females so that the they are of gender "female".
 
 ## Remove
 
