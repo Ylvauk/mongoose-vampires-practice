@@ -144,7 +144,7 @@ Select all the vampires that:
 3. have a title AND no victims
 4. have victims AND the victims they have are greater than 1000
 
-### [Select with OR](https://docs.mongodb.com/manual/reference/operator/query/or/)
+### [Select with OR](https://docs.mongodb.com/manual/reference/operator/query/or/) or [IN](https://docs.mongodb.com/manual/reference/operator/query/in/#mongodb-query-op.-in)
 
 Select all the vampires that:
 
