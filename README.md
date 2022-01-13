@@ -120,11 +120,14 @@ Vampire.insertMany(seedData, (err, vampires) => {
 
 1. Using the create method, create 4 new vampires with any qualities that you like.
 
-## Querying
+## [Querying](https://mongoosejs.com/docs/api.html#model_Model.find)
 
 ### Select by comparison
 
 Write a different query for each of the following:
+
+> Check out the [docs](https://mongoosejs.com/docs/tutorials/query_casting.html) for more examples.
+> All the [comparison query operators](https://docs.mongodb.com/manual/reference/operator/query-comparison/) supported by MongoDB
 
 1. Find all the vampires that have a gender of female
 2. have greater than 500 victims
