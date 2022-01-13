@@ -4,6 +4,15 @@ For this assignment, you will be using some of the mongoose commands that you le
 
 ![mongoose](https://s-media-cache-ak0.pinimg.com/564x/ee/b7/a9/eeb7a99383582d53e65ffcc0e4a225bd.jpg)
 
+## Technical Requirements
+
+1. Must be able to run without syntax errors
+1. Must get functionality required for each section working
+
+## Deliverables
+
+1. An `app.js` file with your solutions to the prompts below.
+
 # Resources
 
 Note that some of these prompts will be challenging! Do your best and utilize the following resources to research the commands you will need:
@@ -16,12 +25,28 @@ Note that some of these prompts will be challenging! Do your best and utilize th
 
 1. Fork and clone this directory.
 1. Check out a dev branch to work on.
-1. Run `npm i` to download Mongoose.
+1. Run `npm i` to download dependencies.
 1. Open the project in vscode, you'll be working with some starter code in the `models` folder and the `app.js` file
+1. Create a `.env` file in the root of your repo.
+
+Inside `.env`:
+
+- Paste your connection string (yours will look different than the one below!)
+
+```
+DATABASE_URL=mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/test?retryWrites=true
+```
+
+You need to update the connection string as follows:
+
+1. Replace with the password of the database user you created.
+1. _IMPORTANT_: The connection string by default connects to a namespace (database) named admin (...mongodb.net/admin?retryWrites=true...). However, the admin namespace must be updated to your preferred namespace (database) name. For example, "vampires": (...mongodb.net/vampires?retryWrites=true...).
 
 Complete the prompts below. When complete, submit your work with a pull request on the original repo.
 
-Unless otherwise stated, homework is due by 10 am ET the next class day.
+Unless otherwise stated, homework is due by 9 am ET the next class day.
+
+# The Exercise
 
 # What is a schema?
 
@@ -29,7 +54,7 @@ A schema is a way to organize, ahead of time, what a group of data is going to l
 
 Mongo, is schema-less on the database level. It doesn't care what the data looks like and will take in virtually anything as long as it's syntactically correct.
 
-## Why they are important?
+## If MongoDB doesn't need schemas, why are they important?
 
 Even when you are using MongoDB, an inherently schema-less database, a schema can be very helpful. It helps control what is going into the database so that you can both know what is going into it, and to make validations. Note that with MongoDB, even if a piece of data is not a part of your original schema, you can still store it.
 
@@ -37,9 +62,7 @@ Even when you are using MongoDB, an inherently schema-less database, a schema ca
 
 This is where mongoose comes in. Instead of manually making sure everything we are putting into our database makes sense and conforms to some type of structure, Mongoose allows us to define schemas.
 
-Mongoose, in the background, can enforce these schemas (as strictly as you like) in order to make sense of the data going into the database and to allow validation. It provides powerful and simple to use tools to do this.
-
-# The Exercise
+Mongoose, in the background, can enforce these schemas (as strictly as you like) in order to make sense of the data going into the database and to allow validation. It provides powerful and developer-friendly tools to do this.
 
 ## Building a Schema
 
