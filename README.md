@@ -135,7 +135,7 @@ Write a different query for each of the following:
 4. have a victim count is not equal to 210234
 5. have greater than 150 AND fewer than 500 victims
 
-### Select by exists or does not exist
+### [Select by exists or does not exist](https://docs.mongodb.com/manual/reference/operator/query/exists/)
 
 Select all the vampires that:
 
@@ -144,7 +144,7 @@ Select all the vampires that:
 3. have a title AND no victims
 4. have victims AND the victims they have are greater than 1000
 
-### Select with OR
+### [Select with OR](https://docs.mongodb.com/manual/reference/operator/query/or/)
 
 Select all the vampires that:
 
