@@ -2,12 +2,13 @@
 Set up and Configuration
 **********************************************************************/
 // Dependencies
+require('dotenv').config();
 const mongoose = require('mongoose');
 const seedData = require('./models/seed_vampires.js');
 const Vampire = require('./models/vampire.js');
 
 // Configuration
-const mongoURI = 'mongodb://localhost:27017/vampires';
+const mongoURI = process.env.DATABASE_URL;
 const db = mongoose.connection;
 
 // Connect to Mongo
@@ -23,7 +24,7 @@ db.on('open', () => {
 });
 
 /**********************************************************************
-SEED YOUR DATABASE
+SEED YOUR DATABASE AFTER YOU CREATE YOUR SCHEMA
 Run this code ONCE with `node app.js` -- when you are done, comment it out!
 ***********************************************************************/
 

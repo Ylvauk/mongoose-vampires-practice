@@ -4,6 +4,15 @@ For this assignment, you will be using some of the mongoose commands that you le
 
 ![mongoose](https://s-media-cache-ak0.pinimg.com/564x/ee/b7/a9/eeb7a99383582d53e65ffcc0e4a225bd.jpg)
 
+## Technical Requirements
+
+1. Must be able to run without syntax errors
+1. Must get functionality required for each section working
+
+## Deliverables
+
+1. An `app.js` file with your solutions to the prompts below.
+
 # Resources
 
 Note that some of these prompts will be challenging! Do your best and utilize the following resources to research the commands you will need:
@@ -16,12 +25,28 @@ Note that some of these prompts will be challenging! Do your best and utilize th
 
 1. Fork and clone this directory.
 1. Check out a dev branch to work on.
-1. Run `npm i` to download Mongoose.
+1. Run `npm i` to download dependencies.
 1. Open the project in vscode, you'll be working with some starter code in the `models` folder and the `app.js` file
+1. Create a `.env` file in the root of your repo.
+
+Inside `.env`:
+
+- Paste your connection string (yours will look different than the one below!)
+
+```
+DATABASE_URL=mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/test?retryWrites=true
+```
+
+You need to update the connection string as follows:
+
+1. Replace with the password of the database user you created.
+1. _IMPORTANT_: The connection string by default connects to a namespace (database) named myFirstDatabase. However, this should be updated to your preferred namespace (database) name. For example, "vampires": `...mongodb.net/vampires?retryWrites=true...`.
 
 Complete the prompts below. When complete, submit your work with a pull request on the original repo.
 
-Unless otherwise stated, homework is due by 10 am ET the next class day.
+Unless otherwise stated, homework is due by 9 am ET the next class day.
+
+# The Exercise
 
 # What is a schema?
 
@@ -29,7 +54,7 @@ A schema is a way to organize, ahead of time, what a group of data is going to l
 
 Mongo, is schema-less on the database level. It doesn't care what the data looks like and will take in virtually anything as long as it's syntactically correct.
 
-## Why they are important?
+## If MongoDB doesn't need schemas, why are they important?
 
 Even when you are using MongoDB, an inherently schema-less database, a schema can be very helpful. It helps control what is going into the database so that you can both know what is going into it, and to make validations. Note that with MongoDB, even if a piece of data is not a part of your original schema, you can still store it.
 
@@ -37,9 +62,7 @@ Even when you are using MongoDB, an inherently schema-less database, a schema ca
 
 This is where mongoose comes in. Instead of manually making sure everything we are putting into our database makes sense and conforms to some type of structure, Mongoose allows us to define schemas.
 
-Mongoose, in the background, can enforce these schemas (as strictly as you like) in order to make sense of the data going into the database and to allow validation. It provides powerful and simple to use tools to do this.
-
-# The Exercise
+Mongoose, in the background, can enforce these schemas (as strictly as you like) in order to make sense of the data going into the database and to allow validation. It provides powerful and developer-friendly tools to do this.
 
 ## Building a Schema
 
@@ -63,13 +86,13 @@ var vampire = {
 
 1. Build a vampire **schema** and **model** that matches the object above inside the `models/vampires.js` file
 
-1. Go to the Mongoose documentation to learn more about validations and defaults: http://mongoosejs.com/docs/api.html
+1. Go to the [Mongoose documentation](https://mongoosejs.com/docs/schematypes.html) to learn more about validations and defaults
 
 1. The **name field is required**, so make sure that the schema accommodates for that.
 
 1. Also, **no vampire will have less than 0 victims**, so add that into the schema as a validation.
 
-1. Lastly, set the **default value of the hair color to blonde**.
+1. Lastly, set the **default value of the hair color to black**.
 
 ## Inserting Seed Data Using Mongoose
 
@@ -95,21 +118,24 @@ Vampire.insertMany(seedData, (err, vampires) => {
 
 ### Add some new vampire data
 
-1. Using the create method, create 4 new vampires with any qualities that you like two should be male and two should be female.
+1. Using the create method, create 4 new vampires with any qualities that you like.
 
-## Querying
+## [Querying](https://mongoosejs.com/docs/api.html#model_Model.find)
 
 ### Select by comparison
 
 Write a different query for each of the following:
 
-1. Find all the vampires that that are females
+> Check out the [docs](https://mongoosejs.com/docs/tutorials/query_casting.html) for more examples.
+> All the [comparison query operators](https://docs.mongodb.com/manual/reference/operator/query-comparison/) supported by MongoDB
+
+1. Find all the vampires that have a gender of female
 2. have greater than 500 victims
 3. have fewer than or equal to 150 victims
 4. have a victim count is not equal to 210234
 5. have greater than 150 AND fewer than 500 victims
 
-### Select by exists or does not exist
+### [Select by exists or does not exist](https://docs.mongodb.com/manual/reference/operator/query/exists/)
 
 Select all the vampires that:
 
@@ -118,7 +144,7 @@ Select all the vampires that:
 3. have a title AND no victims
 4. have victims AND the victims they have are greater than 1000
 
-### Select with OR
+### [Select with OR](https://docs.mongodb.com/manual/reference/operator/query/or/) or [IN](https://docs.mongodb.com/manual/reference/operator/query/in/#mongodb-query-op.-in)
 
 Select all the vampires that:
 
@@ -127,7 +153,7 @@ Select all the vampires that:
 3. have more than 1000 victims or love marshmallows
 4. have red hair or green eyes
 
-### Before you continue on to part two, you should know that Mongoose has some sweet helper functions that can make all this a little easier. See below.
+### Before you continue on to part two, you should know that Mongoose has some sweet [helper functions](https://mongoosejs.com/docs/queries.html#queries) that can make all this a little easier. See below.
 
 Mongoose's default find gives you an array of objects. But what if you know you only want one object? These convenience methods just give you one object without the usual array surrounding it.
 
@@ -196,14 +222,13 @@ Select all vampires that:
 
 ## Replace
 
-1. replace the vampire called 'Claudia' with a vampire called 'Eve'. 'Eve' will have a key called 'portrayed_by' with the value 'Tilda Swinton'
-2. replace the first male vampire with another whose name is 'Guy Man', and who has a key 'is_actually' with the value 'were-lizard'
+1. replace the vampire called 'Claudia' with a vampire called 'Claude', and any other properties you'd like
+2. replace the first male vampire with another whose name is 'Guy Man', and any other properties you'd like
 
 ## Update
 
-1. Update 'Eve' to have a gender of 'm'
-2. Rename 'Eve's' name field to 'moniker'
-3. We now no longer want to categorize female gender as "f", but rather as **fems**. Update all females so that the they are of gender "fems".
+1. Update 'Claude' to have a gender of 'm'
+1. We now no longer want to categorize female gender as "f", but rather as **female**. Update all females so that the they are of gender "female".
 
 ## Remove
 
