@@ -227,8 +227,8 @@ Select all vampires that:
 
 ## Update
 
-1. Update 'Claude' to have a gender of 'm'
-1. We now no longer want to categorize female gender as "f", but rather as **female**. Update all females so that the they are of gender "female".
+1. Update 'Claude' to have a gender of 'm'.
+1. We now no longer want to categorize female gender as "f", but rather as **female**. Update all vampires with gender "f" so that they are of gender "female".
 
 ## Remove
 
