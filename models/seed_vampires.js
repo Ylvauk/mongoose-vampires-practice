@@ -80,7 +80,7 @@ module.exports = [
 		hair_color: 'brown',
 		eye_color: 'brown',
 		loves: ['trickery', 'vampiric cults', 'fancy cloaks'],
-		location: 'Rome, Italy',
+		location:'Rome,Italy',
 		gender: 'm',
 		victims: 1103,
 	},
